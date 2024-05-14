@@ -30,12 +30,12 @@
 export default {
     data(){
         return{
-            receivedData: ''
+            receivedData: null
         }
     },
    mounted() {
  
-  this.receivedData = this.$route.params.data;
+  this.receivedData = this.$route.params.query;
   console.log(this.receivedData);
 }
 }

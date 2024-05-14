@@ -42,9 +42,8 @@
                 <div>
                     <img :src="el.img" alt="">
                 </div>
-                <div class="head__texts" id="rest__name" @click="this.$router.push({path: '/rest', params: {data: 'String'} });">
-                    {{el.name}}
-                </div>
+                 <router-link  :to="{ path: '/rest', params: { query: el } }  " class="head__texts" id="rest__name">{{el.name}}</router-link>
+              
                 <div class="catalogs">
                     <p v-for="(j, ins) in el.catalog" :key="ins">
                         {{j}}
@@ -218,7 +217,7 @@ export default {
                     name: 'Rose Garden Restaurant',
                     catalog: ['Burger - ','Chicken - ','Riche - ','Wings'],
                     rate: '4.7',
-                    deliveryCost: 'Free',
+                    deliveryCost: 'Free', 
                     time: '20 min'
                 }
             ]
